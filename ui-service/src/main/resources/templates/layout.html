@@ -1,0 +1,97 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+<head th:fragment="head-fragment">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">></script>
+	<script src="https://d3js.org/d3.v2.min.js?2.9.3"></script>
+<link rel="stylesheet" href="../static/css/site.css" th:href="@{/css/site.css}" />
+<title layout:title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE">Data Visualization Microservices</title>
+</head>
+<body>
+
+<script th:src="@{/js/toggle.js}"></script>
+
+<!-- Vertical navbar -->
+<header>
+<div class="vertical-nav bg-white" id="sidebar">
+	<div class="py-4 px-3 mb-4 bg-light">
+		<div class="media d-flex align-items-center"><img src="https://avatars.githubusercontent.com/u/25644536?v=4" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+			<div class="media-body">
+				<h4 class="m-0">Lyes Sefiane</h4>
+				<p class="font-weight-light text-muted mb-0">Java Developer</p>
+				<div class="social-media">
+					<a href="https://github.com/lyes-s"><i class="fa fa-github fa-lg"></i></a>
+					<a href="https://linkedin.com/in/lyes-sefiane"><i class="fa fa-linkedin-square fa-lg"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+	<ul class="nav flex-column bg-white mb-0">
+		<li class="nav-item">
+			<a href="#" th:href="@{/index}" class="nav-link text-dark font-italic bg-light">
+				<i class="fa fa-home fa-lg mr-3 text-primary"></i>
+				Home
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+				About
+			</a>
+		</li>
+	</ul>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Services</p>
+
+	<li class="nav-item">
+		<a href="#" class="nav-link text-dark font-italic">
+			<i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+			Inventory
+		</a>
+	</li>
+
+	<ul class="nav flex-column bg-white mb-0">
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-link fa-lg mr-3 text-primary"></i>
+				Visualization
+			</a>
+		</li>
+	</ul>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Contact</p>
+
+	<ul class="nav flex-column bg-white mb-0">
+		<li class="nav-item">
+			<a href="#"  th:href="@{/support}" class="nav-link text-dark font-italic">
+				<i class="fa fa-paper-plane mr-3 text-primary fa-fw"></i>
+				Support
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- End vertical navbar -->
+</header>
+
+<main class="page-content" id="content" role="main">
+	<div layout:fragment="content"></div>
+</main>
+
+
+<footer class="footer" id="footer">
+	<div class="container">
+		<p class="text-center text-muted">&copy; ~ To infinity & Beyond 👽</p>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
