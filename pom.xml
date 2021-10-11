@@ -12,7 +12,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
-
+		<module>ui-service</module>
 	</modules>
 
 </project>

@@ -5,4 +5,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 ## License
-[MIT](https://github.com/lyes-s/data-visualization/blob/master/LICENSE.md)
+[MIT](https://github.com/lyes-s/data-visualization-microservices/blob/master/LICENSE.md)
