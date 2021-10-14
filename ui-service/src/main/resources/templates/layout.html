@@ -1,5 +1,8 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+	  lang="en">
 <head th:fragment="head-fragment">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -19,14 +22,14 @@
 <header>
 <div class="vertical-nav bg-white" id="sidebar">
 	<div class="py-4 px-3 mb-4 bg-light">
-		<div class="media d-flex align-items-center"><img src="https://avatars.githubusercontent.com/u/25644536?v=4" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+		<div sec:authorize="isAuthenticated()" class="media d-flex align-items-center"><img th:src="@{/images/avatar.png}" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
 			<div class="media-body">
-				<h4 class="m-0">Lyes Sefiane</h4>
-				<p class="font-weight-light text-muted mb-0">Java Developer</p>
 				<div class="social-media">
-					<a href="https://github.com/lyes-s"><i class="fa fa-github fa-lg"></i></a>
-					<a href="https://linkedin.com/in/lyes-sefiane"><i class="fa fa-linkedin-square fa-lg"></i></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<span class="hidden-xs" sec:authentication="name"></span>
+					</a>
 				</div>
+				<a href="#" th:href="@{/logout}" >Logout</a>
 			</div>
 		</div>
 	</div>
@@ -90,8 +93,6 @@
 		<p class="text-center text-muted">&copy; ~ To infinity & Beyond 👽</p>
 	</div>
 </footer>
-
-
 
 </body>
 </html>
